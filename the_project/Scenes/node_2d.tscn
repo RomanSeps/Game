@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://1q8y7i2do1g3"]
+
+[ext_resource type="PackedScene" uid="uid://d13jpskdyv8yp" path="res://Scenes/character_body_2d.tscn" id="1_bj0mu"]
+[ext_resource type="PackedScene" uid="uid://cfq0jkw32x54a" path="res://Scenes/Platform.tscn" id="2_msqhg"]
+[ext_resource type="PackedScene" uid="uid://bx6ca6xa4i3cv" path="res://Scenes/floor.tscn" id="2_vckah"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fh11o"]
+size = Vector2(128, 132)
+
+[node name="Game" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_bj0mu")]
+position = Vector2(467, 331)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+visible = false
+shape = SubResource("RectangleShape2D_fh11o")
+
+[node name="Floor" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(3, 194)
+
+[node name="Node2D" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(433, 49)
+
+[node name="Floor2" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(-813, 155)
+
+[node name="Floor3" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(1073, 378)
