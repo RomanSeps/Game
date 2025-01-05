@@ -1,0 +1,67 @@
+[gd_scene load_steps=7 format=3 uid="uid://1q8y7i2do1g3"]
+
+[ext_resource type="PackedScene" uid="uid://dfh2jrpleqxtm" path="res://Scenes/Background.tscn" id="1_8m46m"]
+[ext_resource type="PackedScene" uid="uid://d13jpskdyv8yp" path="res://Scenes/Player.tscn" id="1_bj0mu"]
+[ext_resource type="PackedScene" uid="uid://cfq0jkw32x54a" path="res://Scenes/Platform.tscn" id="2_msqhg"]
+[ext_resource type="PackedScene" uid="uid://bx6ca6xa4i3cv" path="res://Scenes/floor.tscn" id="2_vckah"]
+[ext_resource type="PackedScene" uid="uid://dw1qbul1ifg31" path="res://Scenes/Enemy.tscn" id="4_xkslp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fh11o"]
+size = Vector2(128, 132)
+
+[node name="Game" type="Node2D"]
+
+[node name="Node2D2" parent="." instance=ExtResource("1_8m46m")]
+position = Vector2(339, -1026)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_bj0mu")]
+position = Vector2(50, 295)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
+visible = false
+shape = SubResource("RectangleShape2D_fh11o")
+
+[node name="Floor" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(-27, 632)
+
+[node name="Node2D" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(562, 507)
+
+[node name="Floor2" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(-457, 632)
+
+[node name="Floor3" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(817, 636)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("4_xkslp")]
+position = Vector2(979, 363)
+
+[node name="Floor4" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(1250, 637)
+
+[node name="Node2D3" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(1491, 502)
+
+[node name="Node2D4" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(1981, 325)
+
+[node name="Floor5" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(1681, 637)
+
+[node name="Floor6" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(2111, 637)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("4_xkslp")]
+position = Vector2(2036, -19)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("4_xkslp")]
+position = Vector2(2381, 362)
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("4_xkslp")]
+position = Vector2(2183, 365)
+
+[node name="CharacterBody2D6" parent="." instance=ExtResource("4_xkslp")]
+position = Vector2(1969, 364)
+
+[node name="CharacterBody2D7" parent="." instance=ExtResource("4_xkslp")]
+position = Vector2(1556, 165)

@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://d13jpskdyv8yp"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4o6we"]
+[ext_resource type="Texture2D" uid="uid://b2tbin8vle6kv" path="res://Assets/Projekt2.png" id="2_kru3j"]
+[ext_resource type="AudioStream" uid="uid://d3w1l56lmyvgl" path="res://Audio/01. Effort Grunt (Male).wav" id="3_2ivbn"]
+[ext_resource type="AudioStream" uid="uid://se2ia7st36e7" path="res://Audio/sword-sound-effect-2-234986.mp3" id="4_7n6uw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngn4g"]
+size = Vector2(53, 224)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nv1h"]
+size = Vector2(54, 224.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_4o6we")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(4.46337, 4.75833)
+texture = ExtResource("2_kru3j")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="." groups=["Player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2.5, 22)
+shape = SubResource("RectangleShape2D_ngn4g")
+debug_color = Color(0.813017, 0.146306, 0.921051, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 22)
+shape = SubResource("RectangleShape2D_2nv1h")
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_2ivbn")
+
+[node name="Sword_slash" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7n6uw")
+
+[node name="Score" type="Label" parent="."]
+offset_left = 487.0
+offset_top = -355.0
+offset_right = 626.0
+offset_bottom = -319.0
+text = "Score: 0"
+horizontal_alignment = 1
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
