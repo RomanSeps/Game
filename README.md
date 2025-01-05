@@ -20,10 +20,10 @@ Některé assety mám již před-připravené, nemohl jsem je však zatím imple
 Zvukové assety jsou plně outsourcované.
 
 ### Audio - credit
-Skok - VoiceBosch
-Zabití - RichardDooDee23 (Pixabay)
-Hudba / ambient v pozadí - JDSherbert
-Meč - Cyberwave Orchestra
+- Skok - VoiceBosch
+- Zabití - RichardDooDee23 (Pixabay)
+- Hudba / ambient v pozadí - JDSherbert
+- Meč - Cyberwave Orchestra
 
 ### Grafika - credit
 Pozadí (Možná změním) - Eder Muniz
