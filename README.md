@@ -45,6 +45,7 @@ Pár ukázek ze samotné implementace / práce na projektu
 Za účelem propagace, jsem se rozhodl zvolit sociální síť Instagram.
 Zde jsem hře vytvořil celý profil, tak aby lidé měli alespoň nějakou představu, jak se na hře pracuje...
 [Instagram - PixelSlash](https://www.instagram.com/pixelslash5/)
+![Banner](PixelSlash-banner.png)
 
 ## Finální verze
 Hra je stále v dosti nestabilním / nefunkčním stavu. Nepřátele se například nesoustředí na hráče, tudíž na něj ani přímo neútočí.
