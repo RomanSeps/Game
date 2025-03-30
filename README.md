@@ -23,7 +23,7 @@ Ostatní assety byli tvořeny např.:
 - A jiné
 Některé části byli však i navrženy jako skici na papíru.
 ![Původní náčrt](20241101_125336.jpg)
-![Již hotový produkt]()
+![Již hotový produkt](PixelSlash8.png)
 
 ## Zvuky
 Co se týče zvuků, ty byli plně staženy z internetu, někdy i s trochou úpravy...
@@ -37,9 +37,9 @@ Ambient byl vytvořen uživatelem - JDSherbert
 
 ## Implementace
 Pár ukázek ze samotné implementace / práce na projektu
-![]()
-![]()
-![]()
+![](PixelSlash1.png)
+![](PixelSlash2.png)
+![](PixelSlash3.png)
 
 ## Propagace
 Za účelem propagace, jsem se rozhodl zvolit sociální síť Instagram.
@@ -73,4 +73,4 @@ Většina hlavních částí byla úspěšně splněna, a případné úpravy a 
 - Meč - Cyberwave Orchestra
 
 ### Grafika - credit
-Pozadí (Možná změním) - Eder Muniz
+Pozadí - Eder Muniz
