@@ -22,7 +22,7 @@ Ostatní assety byli tvořeny např.:
 - V Malování
 - A jiné
 Některé části byli však i navrženy jako skici na papíru.
-![Původní náčrt]()
+![Původní náčrt](20241101_125336.jpg)
 ![Již hotový produkt]()
 
 ## Zvuky
@@ -52,7 +52,7 @@ Hra má však již funkční útoky jak hráče, tak i nepřátel, i přesto že
 Hra má jednu úroveň s krátkým úvodem a několika nepřáteli.
 Hra má funkční hlavní menu, menu po smrti hráče a také vítězné menu.
 Ve hře lze nalézt také sběratelské předměty, pro extra skóre.
-![Ukázka hry]()
+![Ukázka hry](PixelSlash7.png)
 
 ## Závěr
 Celkově jsem s projektem tak nějak spokojený. Hra sice není v nejlepším stavu, ale ani v nejhorším.
