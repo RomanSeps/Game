@@ -1,0 +1,353 @@
+[gd_scene load_steps=16 format=3 uid="uid://1q8y7i2do1g3"]
+
+[ext_resource type="PackedScene" uid="uid://dfh2jrpleqxtm" path="res://Scenes/Background.tscn" id="1_8m46m"]
+[ext_resource type="PackedScene" uid="uid://d13jpskdyv8yp" path="res://Scenes/Player.tscn" id="1_bj0mu"]
+[ext_resource type="PackedScene" uid="uid://cfq0jkw32x54a" path="res://Scenes/Platform.tscn" id="2_msqhg"]
+[ext_resource type="PackedScene" uid="uid://bx6ca6xa4i3cv" path="res://Scenes/floor.tscn" id="2_vckah"]
+[ext_resource type="PackedScene" uid="uid://dw1qbul1ifg31" path="res://Scenes/Enemy.tscn" id="4_xkslp"]
+[ext_resource type="PackedScene" uid="uid://b4eu1jga4x2qw" path="res://Scenes/del-box.tscn" id="6_tx0tn"]
+[ext_resource type="PackedScene" uid="uid://u7a83f0edjxh" path="res://Scenes/InvisWall.tscn" id="7_wjtap"]
+[ext_resource type="PackedScene" uid="uid://f08tf5rqilos" path="res://Scenes/Soul.tscn" id="8_v7gqg"]
+[ext_resource type="PackedScene" uid="uid://fqjj1r52x5h0" path="res://Scenes/Sniper.tscn" id="10_hvaui"]
+[ext_resource type="PackedScene" uid="uid://c2nv1j5n57dw7" path="res://Scenes/Ground.tscn" id="11_2ooml"]
+[ext_resource type="LabelSettings" uid="uid://ce6ygc0y147ff" path="res://Scenes/text.tres" id="11_p20hg"]
+[ext_resource type="Texture2D" uid="uid://cslpwhbvjwk7r" path="res://Assets/icon2.png" id="12_he4j0"]
+[ext_resource type="Texture2D" uid="uid://c6r5h3t2ujtm2" path="res://Assets/icon1.png" id="13_he4j0"]
+[ext_resource type="PackedScene" uid="uid://bom0abi8881sg" path="res://Scenes/end_block.tscn" id="14_85gyg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fh11o"]
+size = Vector2(128, 132)
+
+[node name="Game" type="Node2D"]
+
+[node name="Node2D2" parent="." instance=ExtResource("1_8m46m")]
+position = Vector2(339, -1026)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_bj0mu")]
+top_level = true
+position = Vector2(-1638, 643)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
+visible = false
+shape = SubResource("RectangleShape2D_fh11o")
+
+[node name="Node2D" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(542, 470)
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("4_xkslp")]
+position = Vector2(982, 323)
+
+[node name="Node2D3" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(1491, 502)
+
+[node name="Node2D4" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(1981, 325)
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("4_xkslp")]
+position = Vector2(2370, 331)
+
+[node name="CharacterBody2D7" parent="." instance=ExtResource("4_xkslp")]
+position = Vector2(1556, 165)
+
+[node name="Node2D5" parent="." instance=ExtResource("6_tx0tn")]
+position = Vector2(-2107, 600)
+
+[node name="Node2D6" parent="." instance=ExtResource("7_wjtap")]
+position = Vector2(911, 598)
+
+[node name="Node2D7" parent="." instance=ExtResource("7_wjtap")]
+position = Vector2(1531, 405)
+
+[node name="Node2D8" parent="." instance=ExtResource("7_wjtap")]
+position = Vector2(1839, 406)
+
+[node name="Node2D9" parent="." instance=ExtResource("7_wjtap")]
+position = Vector2(2820, 581)
+
+[node name="Node2D10" parent="." instance=ExtResource("8_v7gqg")]
+position = Vector2(33, 546)
+
+[node name="Node2D11" parent="." instance=ExtResource("8_v7gqg")]
+position = Vector2(1879, 164)
+
+[node name="Node2D16" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(2817, 316)
+
+[node name="Node2D17" parent="." instance=ExtResource("10_hvaui")]
+position = Vector2(3259, 459)
+
+[node name="Node2D18" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(-203, 713)
+
+[node name="Node2D19" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(257, 713)
+
+[node name="Node2D20" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(1091, 713)
+
+[node name="Node2D21" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(1577, 713)
+
+[node name="Node2D22" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(2060, 713)
+
+[node name="Node2D23" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(2542, 713)
+
+[node name="Node2D24" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(3358, 710)
+
+[node name="Node2D25" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(3843, 710)
+
+[node name="Node2D12" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(713, 713)
+
+[node name="Node2D13" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(-689, 713)
+
+[node name="Node2D14" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(-1176, 713)
+
+[node name="Node2D15" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(-1662, 713)
+
+[node name="Node2D26" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(-2146, 713)
+
+[node name="Node2D27" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(-1434, 255)
+
+[node name="Node2D28" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(-2049, -18)
+
+[node name="Node2D29" parent="." instance=ExtResource("8_v7gqg")]
+position = Vector2(-2156, -166)
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("4_xkslp")]
+top_level = true
+position = Vector2(-231, 325)
+
+[node name="Node2D30" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(-781, 251)
+
+[node name="Node2D31" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(-260, 13)
+
+[node name="Node2D32" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(327, -163)
+
+[node name="Floor" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(744, -386)
+
+[node name="Floor2" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(1174, -386)
+
+[node name="CharacterBody2D5" parent="." instance=ExtResource("4_xkslp")]
+position = Vector2(1359, -659)
+
+[node name="Node2D33" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(1958, -499)
+
+[node name="Node2D34" parent="." instance=ExtResource("8_v7gqg")]
+position = Vector2(1855, -649)
+
+[node name="Node2D35" parent="." instance=ExtResource("7_wjtap")]
+position = Vector2(1714, -417)
+
+[node name="Node2D36" parent="." instance=ExtResource("7_wjtap")]
+position = Vector2(887, -417)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -2114.0
+offset_top = 407.0
+offset_right = -1568.0
+offset_bottom = 484.0
+text = "Welcome to PixelSlash!
+A short, simple, indie game!"
+label_settings = ExtResource("11_p20hg")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = -1349.0
+offset_top = 535.0
+offset_right = -707.0
+offset_bottom = 622.0
+text = "Time for the basics!
+Move"
+label_settings = ExtResource("11_p20hg")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Label2"]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 12.0
+offset_right = 576.0
+offset_bottom = 405.0
+texture = ExtResource("12_he4j0")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -1576.0
+offset_top = -156.0
+offset_right = -919.0
+offset_bottom = -61.0
+text = "Make sure to collect the SOULS
+of your enemies for 
+extra points!"
+label_settings = ExtResource("11_p20hg")
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = -287.0
+offset_top = 602.0
+offset_right = -80.0
+offset_bottom = 648.0
+text = "Attack"
+label_settings = ExtResource("11_p20hg")
+
+[node name="TextureRect" type="TextureRect" parent="Label4"]
+layout_mode = 0
+offset_left = -96.0
+offset_top = -27.0
+offset_right = 351.0
+offset_bottom = 374.0
+texture = ExtResource("13_he4j0")
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 1125.0
+offset_top = -529.0
+offset_right = 1573.0
+offset_bottom = -472.0
+text = "QUICK!
+DODGE THE SHURIKENS"
+label_settings = ExtResource("11_p20hg")
+horizontal_alignment = 1
+
+[node name="Node2D37" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(2955, 711)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -3513.0
+offset_top = -3184.0
+offset_right = -2132.0
+offset_bottom = 1551.0
+color = Color(0.0177324, 0.0177324, 0.0177324, 1)
+
+[node name="Node2D38" parent="." instance=ExtResource("1_8m46m")]
+position = Vector2(6887, -1026)
+
+[node name="Node2D39" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(4328, 710)
+
+[node name="Node2D40" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(4815, 710)
+
+[node name="Node2D41" parent="." instance=ExtResource("8_v7gqg")]
+position = Vector2(3996, 488)
+
+[node name="Node2D42" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(4607, 354)
+
+[node name="Node2D43" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(4103, -68)
+
+[node name="Node2D44" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(2463, -251)
+
+[node name="Node2D45" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(3205, -378)
+
+[node name="CharacterBody2D6" parent="." instance=ExtResource("4_xkslp")]
+position = Vector2(3202, -717)
+
+[node name="Node2D46" parent="." instance=ExtResource("7_wjtap")]
+position = Vector2(3537, -468)
+
+[node name="Node2D47" parent="." instance=ExtResource("7_wjtap")]
+position = Vector2(3260, -472)
+
+[node name="Floor3" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(4583, -433)
+
+[node name="Floor4" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(5014, -433)
+
+[node name="Floor5" parent="." instance=ExtResource("2_vckah")]
+position = Vector2(5442, -433)
+
+[node name="Node2D48" parent="." instance=ExtResource("10_hvaui")]
+position = Vector2(5621, -569)
+
+[node name="Node2D49" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(6313, -616)
+
+[node name="Node2D50" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(7049, -769)
+
+[node name="Node2D51" parent="." instance=ExtResource("8_v7gqg")]
+position = Vector2(6948, -931)
+
+[node name="Node2D52" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(5300, 711)
+
+[node name="Node2D53" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(5784, 711)
+
+[node name="Node2D54" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(6269, 711)
+
+[node name="Node2D55" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(6729, 711)
+
+[node name="Node2D56" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(7206, 711)
+
+[node name="Node2D57" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(7687, 711)
+
+[node name="Node2D58" parent="." instance=ExtResource("11_2ooml")]
+position = Vector2(8160, 711)
+
+[node name="CharacterBody2D8" parent="." instance=ExtResource("4_xkslp")]
+position = Vector2(5574, 326)
+
+[node name="Node2D59" parent="." instance=ExtResource("2_msqhg")]
+position = Vector2(5307, 170)
+
+[node name="CharacterBody2D9" parent="." instance=ExtResource("4_xkslp")]
+position = Vector2(6510, 323)
+
+[node name="Node2D60" parent="." instance=ExtResource("7_wjtap")]
+position = Vector2(7107, 565)
+
+[node name="Node2D61" parent="." instance=ExtResource("7_wjtap")]
+position = Vector2(6081, 568)
+
+[node name="Node2D62" parent="." instance=ExtResource("14_85gyg")]
+position = Vector2(8212, 514)
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 3913.0
+offset_top = -350.0
+offset_right = 4581.0
+offset_bottom = -263.0
+text = "You can't jump this...
+Trust me..."
+label_settings = ExtResource("11_p20hg")
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 3881.0
+offset_top = 581.0
+offset_right = 4204.0
+offset_bottom = 623.0
+text = "Told you..."
+label_settings = ExtResource("11_p20hg")
+horizontal_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 8394.0
+offset_top = -3421.0
+offset_right = 9775.0
+offset_bottom = 1314.0
+color = Color(0.0177324, 0.0177324, 0.0177324, 1)

@@ -1,0 +1,103 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7xspygpjrypo"]
+
+[ext_resource type="Script" uid="uid://byp8ebp58w52y" path="res://Scripts/title_screen.gd" id="1_2mfdy"]
+[ext_resource type="LabelSettings" uid="uid://ce6ygc0y147ff" path="res://Scenes/text.tres" id="2_p3fck"]
+[ext_resource type="Texture2D" uid="uid://bicnvqfk1djua" path="res://Assets/Death1.png" id="3_twnyg"]
+[ext_resource type="Texture2D" uid="uid://br2it2sxlkpj2" path="res://Assets/Enemy1.png" id="4_55kwv"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2mfdy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.513
+anchor_top = 0.485
+anchor_right = 0.513
+anchor_bottom = 0.485
+offset_left = -665.976
+offset_top = -375.28
+offset_right = 666.024
+offset_bottom = 374.72
+color = Color(0.359069, 0.359069, 0.359069, 1)
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.517
+anchor_top = 0.449
+anchor_right = 0.517
+anchor_bottom = 0.449
+offset_left = -59.584
+offset_top = 0.0479736
+offset_right = 60.416
+offset_bottom = 74.048
+text = "START"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.518
+anchor_top = 0.5
+anchor_right = 0.518
+anchor_bottom = 0.5
+offset_left = -59.736
+offset_top = 70.0
+offset_right = 60.264
+offset_bottom = 144.0
+text = "QUIT"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.516
+anchor_top = 0.5
+anchor_right = 0.516
+anchor_bottom = 0.5
+offset_left = -165.432
+offset_top = -145.0
+offset_right = 162.568
+offset_bottom = -76.0
+text = "PixelSlash"
+label_settings = ExtResource("2_p3fck")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -739.0
+offset_top = 89.0
+offset_right = -317.0
+offset_bottom = 467.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.523598
+texture = ExtResource("3_twnyg")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 129.0
+offset_top = -240.0
+offset_right = 520.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.523598
+texture = ExtResource("4_55kwv")
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

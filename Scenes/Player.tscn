@@ -1,0 +1,139 @@
+[gd_scene load_steps=18 format=3 uid="uid://d13jpskdyv8yp"]
+
+[ext_resource type="Script" uid="uid://dbdaqodmfxm8y" path="res://Scripts/Player.gd" id="1_4o6we"]
+[ext_resource type="Texture2D" uid="uid://b1stlsy43u2ls" path="res://Assets/Projekt3-3.png" id="2_bhhdu"]
+[ext_resource type="Texture2D" uid="uid://b2tbin8vle6kv" path="res://Assets/Projekt2.png" id="2_kru3j"]
+[ext_resource type="AudioStream" uid="uid://d3w1l56lmyvgl" path="res://Audio/01. Effort Grunt (Male).wav" id="3_2ivbn"]
+[ext_resource type="Texture2D" uid="uid://nk408l8cr3cq" path="res://Assets/Projekt3.png" id="3_megsn"]
+[ext_resource type="Texture2D" uid="uid://cp5epbw1xj1rv" path="res://Assets/Death.png" id="3_miouo"]
+[ext_resource type="Texture2D" uid="uid://o3hdptph4l16" path="res://Assets/Projekt2-4.png" id="3_nn08x"]
+[ext_resource type="AudioStream" uid="uid://se2ia7st36e7" path="res://Audio/sword-sound-effect-2-234986.mp3" id="4_7n6uw"]
+[ext_resource type="Texture2D" uid="uid://bicnvqfk1djua" path="res://Assets/Death1.png" id="4_o3h8g"]
+[ext_resource type="AudioStream" uid="uid://dju5qw46oynuy" path="res://Audio/male-death-sound-128357.mp3" id="5_5ixxa"]
+[ext_resource type="Texture2D" uid="uid://b3miy15bw63sx" path="res://Assets/Projekt3-2.png" id="5_glx4g"]
+[ext_resource type="Texture2D" uid="uid://sb2lcco61qbc" path="res://Assets/Projekt2-6.png" id="7_miouo"]
+[ext_resource type="Texture2D" uid="uid://cdh7nfoemg37x" path="res://Assets/Projekt2-5.png" id="8_o3h8g"]
+[ext_resource type="Texture2D" uid="uid://b0s00bluyaivx" path="res://Assets/Projekt2-7.png" id="9_1e7my"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_52ee3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_o3h8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_miouo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o3h8g")
+}],
+"loop": false,
+"name": &"Die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("2_kru3j")
+}, {
+"duration": 0.2,
+"texture": ExtResource("2_bhhdu")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_megsn")
+}],
+"loop": true,
+"name": &"Sword1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("2_kru3j")
+}, {
+"duration": 0.5,
+"texture": ExtResource("5_glx4g")
+}],
+"loop": false,
+"name": &"Sword2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kru3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nn08x")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kru3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_miouo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_o3h8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1e7my")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_kru3j")
+}],
+"loop": false,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngn4g"]
+size = Vector2(53, 213)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2nv1h"]
+size = Vector2(55, 214.125)
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
+collision_mask = 15
+script = ExtResource("1_4o6we")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.38419e-07, 2)
+scale = Vector2(4.61666, 4.61667)
+sprite_frames = SubResource("SpriteFrames_52ee3")
+animation = &"Sword2"
+speed_scale = 0.5
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="." groups=["Player"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, 22)
+shape = SubResource("RectangleShape2D_ngn4g")
+debug_color = Color(0.813017, 0.146306, 0.921051, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 21)
+shape = SubResource("RectangleShape2D_2nv1h")
+
+[node name="Die_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_5ixxa")
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_2ivbn")
+
+[node name="Sword_slash" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7n6uw")
+
+[node name="Score" type="Label" parent="."]
+offset_left = 487.0
+offset_top = -355.0
+offset_right = 626.0
+offset_bottom = -319.0
+text = "Score: 0"
+horizontal_alignment = 1
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

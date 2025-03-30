@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxv24yksr55vp"]
+
+[ext_resource type="AudioStream" uid="uid://ddhq0abs3nr7h" path="res://Audio/JDSherbert - Ambiences Music Pack - Dark Dark Woods.wav" id="1_osoek"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+stream = ExtResource("1_osoek")
+autoplay = true

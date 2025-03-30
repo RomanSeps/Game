@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2uchj03bm6ik"]
+
+[ext_resource type="Script" uid="uid://wvlh6dhai1iq" path="res://Scripts/Game_over.gd" id="1_xj6ph"]
+[ext_resource type="LabelSettings" uid="uid://ce6ygc0y147ff" path="res://Scenes/text.tres" id="2_thwhc"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xj6ph")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.498
+anchor_right = 0.5
+anchor_bottom = 0.498
+offset_left = -576.0
+offset_top = -322.704
+offset_right = 578.0
+offset_bottom = 322.296
+color = Color(0.103744, 0.103744, 0.103744, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.503
+anchor_top = 0.44
+anchor_right = 0.503
+anchor_bottom = 0.44
+offset_left = -360.462
+offset_top = -153.8
+offset_right = 359.538
+offset_bottom = 154.2
+text = "GAME OVER
+Better luck next time!"
+label_settings = ExtResource("2_thwhc")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -109.0
+offset_top = 8.0
+offset_right = 113.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Try again"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = 130.0
+offset_right = 108.0
+offset_bottom = 239.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

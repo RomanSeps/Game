@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmoftb0dw2y1x"]
+
+[ext_resource type="Script" uid="uid://c20sk58hg2epc" path="res://Scripts/Bronx.gd" id="1_7a156"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4mbsf"]
+size = Vector2(365, 159)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7a156")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(487.5, 173)
+shape = SubResource("RectangleShape2D_4mbsf")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

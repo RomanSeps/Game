@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://fqjj1r52x5h0"]
+
+[ext_resource type="Script" uid="uid://37bvnftuwwd4" path="res://Scripts/sniper.gd" id="1_c0npw"]
+[ext_resource type="Texture2D" uid="uid://b2osy04167kj4" path="res://Assets/Sniper.png" id="1_yxirs"]
+[ext_resource type="PackedScene" uid="uid://bi8xrbpunsebk" path="res://Scenes/OhFuck.tscn" id="2_up25m"]
+[ext_resource type="AudioStream" uid="uid://c6fhkdebgho0m" path="res://Audio/gunshot-and-reverse-81760 (mp3cut.net).mp3" id="4_h7c71"]
+[ext_resource type="AudioStream" uid="uid://bufcvc53fmlhk" path="res://Audio/super-deep-growl-86749.mp3" id="5_tudfj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxirs"]
+size = Vector2(260, 232)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c0npw"]
+size = Vector2(105, 231.5)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 2
+collision_mask = 30
+script = ExtResource("1_c0npw")
+ammo = ExtResource("2_up25m")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(361, 219)
+scale = Vector2(5.83333, 5.83333)
+texture = ExtResource("1_yxirs")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(335, 243)
+shape = SubResource("RectangleShape2D_yxirs")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="CharacterBody2D"]
+position = Vector2(-584, 248)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(360.5, 242.25)
+shape = SubResource("RectangleShape2D_c0npw")
+
+[node name="Shot" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
+stream = ExtResource("4_h7c71")
+
+[node name="Death_sound" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
+stream = ExtResource("5_tudfj")
+
+[connection signal="area_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_area_exited"]

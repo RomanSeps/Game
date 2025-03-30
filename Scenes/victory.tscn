@@ -1,0 +1,131 @@
+[gd_scene load_steps=6 format=3 uid="uid://hsyvdxsnmhxl"]
+
+[ext_resource type="Script" uid="uid://bu267oxatwc4" path="res://Scripts/end.gd" id="1_pyhgl"]
+[ext_resource type="LabelSettings" uid="uid://ce6ygc0y147ff" path="res://Scenes/text.tres" id="2_o3goa"]
+[ext_resource type="Texture2D" uid="uid://b2tbin8vle6kv" path="res://Assets/Projekt2.png" id="3_7yj50"]
+[ext_resource type="FontFile" uid="uid://b888obm23mmpf" path="res://Assets/04B_30__.TTF" id="4_slr2v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f34f5"]
+font = ExtResource("4_slr2v")
+font_size = 27
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pyhgl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.502
+anchor_top = 0.5
+anchor_right = 0.502
+anchor_bottom = 0.5
+offset_left = -582.304
+offset_top = -322.0
+offset_right = 581.696
+offset_bottom = 328.0
+color = Color(0.18359, 0.18359, 0.18359, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -304.0
+offset_top = -149.0
+offset_right = 277.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CONGRATULATIONS!
+YOU WON!"
+label_settings = ExtResource("2_o3goa")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -10.0
+offset_right = 134.0
+offset_bottom = 83.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play again"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = 101.0
+offset_right = 134.0
+offset_bottom = 194.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -648.0
+offset_top = -42.0
+offset_right = -247.0
+offset_bottom = 315.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.261799
+texture = ExtResource("3_7yj50")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 227.0
+offset_top = 28.0
+offset_right = 542.0
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "FINAL SCORE:
+"
+label_settings = SubResource("LabelSettings_f34f5")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 347.0
+offset_top = 103.0
+offset_right = 387.0
+offset_bottom = 126.0
+label_settings = ExtResource("2_o3goa")
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

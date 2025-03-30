@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://f08tf5rqilos"]
+
+[ext_resource type="Texture2D" uid="uid://d185ui6e2uric" path="res://Assets/soul.png" id="1_g261u"]
+[ext_resource type="Script" uid="uid://c20vi2vxevrls" path="res://Scripts/collectibles.gd" id="2_si30n"]
+[ext_resource type="AudioStream" uid="uid://d02jxt27pdog7" path="res://Audio/retro-coin-4-236671.mp3" id="3_7t0vl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g261u"]
+size = Vector2(69, 74.5)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(494.425, 228.5)
+scale = Vector2(7.71667, 7.71667)
+texture = ExtResource("1_g261u")
+script = ExtResource("2_si30n")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+position = Vector2(-64.0724, -29.6112)
+scale = Vector2(0.12959, 0.12959)
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+position = Vector2(502.5, 209)
+shape = SubResource("RectangleShape2D_g261u")
+
+[node name="Pickup" type="AudioStreamPlayer2D" parent="Sprite2D"]
+stream = ExtResource("3_7t0vl")
+
+[connection signal="area_entered" from="Sprite2D/Area2D" to="Sprite2D" method="_on_area_2d_area_entered"]
