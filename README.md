@@ -68,7 +68,7 @@ Celkově bych však řekl že byl projekt především úspěšný.
 Většina hlavních částí byla úspěšně splněna, a případné úpravy a změny by dle mého názoru nezabrali příliš mnoho času...
 
 ### Ukázka hry
-![PixelSlash - showcase](https://youtu.be/Aw0nwA6REk8)
+[![PixelSlash - showcase](https://youtu.be/Aw0nwA6REk8)]
 
 ### Audio - credit
 - Skok - VoiceBosch
