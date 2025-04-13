@@ -68,7 +68,7 @@ Celkově bych však řekl že byl projekt především úspěšný.
 Většina hlavních částí byla úspěšně splněna, a případné úpravy a změny by dle mého názoru nezabrali příliš mnoho času...
 
 ### Video ze hry
-![Youtube](https://youtu.be/Aw0nwA6REk8)
+[Youtube - link](https://youtu.be/Aw0nwA6REk8)
 
 ### Audio - credit
 - Skok - VoiceBosch
